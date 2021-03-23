@@ -1,6 +1,7 @@
 import './App.css';
 import React, { Component } from 'react';
-import { TitleBar } from './Titlebar'
+import { TitleBar } from './Titlebar';
+import { Navbar } from './Navbar';
 class App extends Component {
   state =
     {
@@ -8,9 +9,22 @@ class App extends Component {
 
     }
 
+  clickHandler = function (e) {
+    let listtype = "all";
+    listtype = e.target.id;
+
+  };
+
   render() {
+
     return (
-      < TitleBar />
+      <div>
+        < TitleBar />
+        <Navbar click={() => this.clickHandler()} />
+
+
+      </div>
+
     )
 
   }
