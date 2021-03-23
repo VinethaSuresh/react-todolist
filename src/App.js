@@ -2,6 +2,7 @@ import './App.css';
 import React, { Component } from 'react';
 import { TitleBar } from './Titlebar';
 import { Navbar } from './Navbar';
+import { TaskContainer } from './Taskcontainer';
 class App extends Component {
   state =
     {
@@ -21,9 +22,10 @@ class App extends Component {
       <div>
         < TitleBar />
         <Navbar click={() => this.clickHandler()} />
+        <TaskContainer />
 
 
-      </div>
+      </div >
 
     )
 
