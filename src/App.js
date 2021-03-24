@@ -6,14 +6,16 @@ import { TaskContainer } from './Taskcontainer';
 let App = () => {
   let [listType, setListType] = useState("all")
   let clickHandler = function (e) {
-    setListType(e.target.id);
+    setListType(e.currentTarget.id);
 
   };
   return (
-    <div>
+    <div className="app">
       < TitleBar />
-      <Navbar clickHandler={clickHandler} listType={listType} />
-      <TaskContainer listType={listType} />
+      <div className="mainArea">
+        <Navbar clickHandler={clickHandler} listType={listType} />
+        <TaskContainer listType={listType} />
+      </div>
     </div >
 
   )

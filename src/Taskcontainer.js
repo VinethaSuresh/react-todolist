@@ -23,7 +23,7 @@ export let TaskContainer = (props) => {
 
     function checkHandler(key, completed) {
         for (let item of list) {
-            if (item.key == key) {
+            if (item.key === key) {
                 item.completed = completed;
 
             }
@@ -33,7 +33,7 @@ export let TaskContainer = (props) => {
 
     function deleteHandler(key) {
         for (let item of list) {
-            if (item.key == key) {
+            if (item.key === key) {
                 item.deleted = !item.deleted;
             }
         }
@@ -60,7 +60,7 @@ export let TaskContainer = (props) => {
 
     return (
         <div className="taskContainer">
-            <p>Things TO DO</p>
+            <div className="titleText">Things TODO</div>
             <div className="task">
                 <input type="text"
                     placeholder="add a new todo"

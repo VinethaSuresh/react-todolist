@@ -1,4 +1,5 @@
 import React from 'react';
+import './List.css';
 
 export let List = (props) => {
     let filteredList = props.list.filter(listItem => {
@@ -24,7 +25,7 @@ export let List = (props) => {
         <tr key={item.key}>
             <td><input type="checkbox" checked={item.completed} onChange={(event) => props.checkHandler(item.key, event.target.checked)}
                 disabled={item.deleted ? true : false} /></td>
-            <td>{item.task}</td>
+            <td className="taskName">{item.task}</td>
             <td><button onClick={() => props.deleteHandler(item.key)}>{item.deleted ? "restore" : "delete"}</button></td>
         </tr >
     ))

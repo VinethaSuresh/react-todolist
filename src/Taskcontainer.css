@@ -1,31 +1,25 @@
-input {
+input[type='text'] {
     width: 350px;
   }
-  p {
-    color: red;
-  }
-
   button:hover {
     border: 2px solid skyblue;
   }
-  div {
-    margin-bottom: 15px;
-  }
   .taskContainer {
-   
-    width: 60%;
-    margin-left: 400px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .task {
     width: 80%;
-    margin-left: 80px;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
   }
-  p{
+  .titleText{
+    margin-top: 1rem;
     font-size: 30px;
-    margin-left: 190px;
-   
-   
-    font-family:Courier New, monospace;
-    text-decoration: underline;
-    text-decoration-color: red;
+    color: red;
+    width: fit-content;
   }
+

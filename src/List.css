@@ -1,0 +1,13 @@
+table {
+    margin-top: 2rem;
+  }
+
+  table td {
+    border: 1px solid black;
+    margin: 0;
+    text-align: center;
+  }
+
+  td.taskName {
+      width: 350px;
+  }
