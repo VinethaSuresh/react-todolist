@@ -1,34 +1,22 @@
 import './App.css';
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { TitleBar } from './Titlebar';
 import { Navbar } from './Navbar';
 import { TaskContainer } from './Taskcontainer';
-class App extends Component {
-  state =
-    {
-      userInput: ''
-
-    }
-
-  clickHandler = function (e) {
-    //let listtype = "all";
-    //listtype = e.target.id;
+let App = () => {
+  let [listType, setListType] = useState("all")
+  let clickHandler = function (e) {
+    setListType(e.target.id);
 
   };
+  return (
+    <div>
+      < TitleBar />
+      <Navbar clickHandler={clickHandler} listType={listType} />
+      <TaskContainer listType={listType} />
+    </div >
 
-  render() {
-
-    return (
-      <div>
-        < TitleBar />
-        <Navbar click={() => this.clickHandler()} />
-        <TaskContainer />
-      </div >
-
-    )
-
-  }
+  )
 
 }
-
 export default App;

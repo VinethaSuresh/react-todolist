@@ -1,23 +1,20 @@
 import React from 'react';
 import './Navbar.css';
 export let Navbar = (props) => {
-    console.log("props", props);
     let navBarItems = [
-        { id: "All", href: "#all" },
-        { id: "Active", href: "#active" },
-        { id: "Completed", href: "#completed" },
-        { id: "Deleted", href: "#deleted" }
+        { id: "all", href: "#all" },
+        { id: "active", href: "#active" },
+        { id: "completed", href: "#completed" },
+        { id: "deleted", href: "#deleted" }
     ]
-    console.log("navBarItems", navBarItems);
 
     let listItems = [];
     for (let item of navBarItems) {
-        console.log("listItems", listItems);
         listItems.push(<li key={item.id}>
             <a href={item.href}
                 id={item.id}
-                className={item.id === "All" ? "active" : ""}
-                onClick={props.click}>
+                className={item.id === props.listType ? "active" : ""}
+                onClick={props.clickHandler}>
                 {item.id}
             </a>
         </li>)
