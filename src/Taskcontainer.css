@@ -1,0 +1,31 @@
+input {
+    width: 350px;
+  }
+  p {
+    color: red;
+  }
+
+  button:hover {
+    border: 2px solid skyblue;
+  }
+  div {
+    margin-bottom: 15px;
+  }
+  .taskContainer {
+   
+    width: 60%;
+    margin-left: 400px;
+  }
+  .task {
+    width: 80%;
+    margin-left: 80px;
+  }
+  p{
+    font-size: 30px;
+    margin-left: 190px;
+   
+   
+    font-family:Courier New, monospace;
+    text-decoration: underline;
+    text-decoration-color: red;
+  }

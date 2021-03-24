@@ -11,8 +11,8 @@ class App extends Component {
     }
 
   clickHandler = function (e) {
-    let listtype = "all";
-    listtype = e.target.id;
+    //let listtype = "all";
+    //listtype = e.target.id;
 
   };
 
@@ -23,8 +23,6 @@ class App extends Component {
         < TitleBar />
         <Navbar click={() => this.clickHandler()} />
         <TaskContainer />
-
-
       </div >
 
     )
