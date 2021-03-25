@@ -5,10 +5,13 @@ import { Navbar } from './Navbar';
 import { TaskContainer } from './Taskcontainer';
 let App = () => {
   let [listType, setListType] = useState("all")
+
+  //Changes listtype on clicking items from sidebar
   let clickHandler = function (e) {
     setListType(e.currentTarget.id);
 
   };
+
   return (
     <div className="app">
       < TitleBar />
